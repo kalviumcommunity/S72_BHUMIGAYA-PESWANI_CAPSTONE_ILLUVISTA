@@ -79,4 +79,3 @@ The **Interactive Virtual Art Gallery** is a **web-based platform** where artist
 📌 Any necessary refinements will be made based on suggestions received.  
 📌 **Final submission will be in the Assignment section as per guidelines.**  
 
-🔗 **Link for Feedback Submission:** [Google Doc link to be added]  
