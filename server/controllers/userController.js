@@ -68,12 +68,41 @@ const getUserById = async (req, res) => {
     }
   };
 
+
   
+  
+  // Update user by ID (PUT)
+const updateUser = async (req, res) => {
+    try {
+      const userId = req.params.id;
+      const updateData = { ...req.body };
+  
+      // Prevent password update here unless you handle hashing it
+      if (updateData.password) {
+        updateData.password = await bcrypt.hash(updateData.password, 10);
+      }
+  
+      const updatedUser = await User.findByIdAndUpdate(
+        userId,
+        updateData,
+        { new: true, runValidators: true }
+      ).select('-password');
+  
+      if (!updatedUser) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+  
+      res.status(200).json({ message: 'User updated successfully', user: updatedUser });
+    } catch (error) {
+      res.status(400).json({ error: error.message });
+    }
+  };
   
   module.exports = {
     signup,
     getUsers,
-    getUserById
+    getUserById,
+    updateUser
   };
   
 
