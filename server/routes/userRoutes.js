@@ -5,7 +5,6 @@ const { signup, getUsers, getUserById ,updateUser} = require('../controllers/use
 router.post('/signup', signup);             // POST /api/signup
 router.get('/users', getUsers);             // GET  /api/users
 router.get('/users/:id', getUserById);    
-router.put('/users/:id', updateUser); 
 
 
 module.exports = router;
