@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "CAPSTONE TESTING",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
