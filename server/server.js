@@ -23,6 +23,13 @@ app.get('/', (req, res) => {
 });
 app.use('/api/users', userRoutes);
 
+// Add the GET method
+app.get('/he', (req, res) => {
+  res.send('he');
+});
+
 // Start server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
