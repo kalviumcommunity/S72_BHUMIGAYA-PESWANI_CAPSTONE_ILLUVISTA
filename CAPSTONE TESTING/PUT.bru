@@ -5,7 +5,15 @@ meta {
 }
 
 put {
-  url: http://localhost:5000/api/users
-  body: none
+  url: http://localhost:5000/api/users/users/67f35a86131a83684e9210e8
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "name": "ABC",
+    "email": "ABC@example.com"
+  }
+  
 }
