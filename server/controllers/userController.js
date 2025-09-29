@@ -3,6 +3,25 @@
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
 
+function validateUserData({ name, email, password }, isUpdate = false) {
+  if (!isUpdate) {
+    if (!name || !email || !password) {
+      return { valid: false, message: "Name, Email, and Password are required" };
+    }
+  }
+  if (name && name.length < 3) {
+    return { valid: false, message: "Name must be at least 3 characters long" };
+  }
+  if (email && !email.includes("@")) {
+    return { valid: false, message: "Invalid email format" };
+  }
+  if (password && password.length < 6) {
+    return { valid: false, message: "Password must be at least 6 characters long" };
+  }
+  return { valid: true };
+}
+
+
 const signup = async (req, res) => {
     try {
       const { name, email, password } = req.body;
