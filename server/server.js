@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/dbconfig');
 const userRoutes = require('./routes/userRoutes');
 const cors = require('cors');
+const logger= require('./logger');
 
 // Load environment variables
 dotenv.config();
@@ -31,5 +32,5 @@ app.get('/he', (req, res) => {
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  logger.info(`Server running on port ${PORT}`);
 });
