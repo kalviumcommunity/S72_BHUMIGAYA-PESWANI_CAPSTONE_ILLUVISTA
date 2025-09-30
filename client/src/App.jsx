@@ -7,6 +7,8 @@ import NotFound from "./pages/NotFound";
 import Upload from "./pages/Upload";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Profile from "./pages/Profile";
+import Protected from "./pages/Protected";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/upload" element={<Upload />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/protected" element={<Protected />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

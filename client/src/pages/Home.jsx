@@ -22,6 +22,8 @@ const Home = () => {
       <div className="mt-6 flex gap-4">
         <Link to="/login" className="px-4 py-2 border border-gray-400 rounded">Login</Link>
         <Link to="/register" className="px-4 py-2 border border-gray-400 rounded">Register</Link>
+        <Link to="/profile" className="px-4 py-2 border border-gray-400 rounded">Profile</Link>
+        <Link to="/protected" className="px-4 py-2 border border-gray-400 rounded">Protected</Link>
       </div>
     </div>
   );
