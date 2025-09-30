@@ -13,6 +13,12 @@ const Home = () => {
       >
         Get Started
       </Link>
+      <Link
+        to="/upload"
+        className="mt-3 px-6 py-2 bg-gray-800 text-white rounded-lg text-md shadow hover:bg-gray-900"
+      >
+        Upload Artwork
+      </Link>
     </div>
   );
 };
