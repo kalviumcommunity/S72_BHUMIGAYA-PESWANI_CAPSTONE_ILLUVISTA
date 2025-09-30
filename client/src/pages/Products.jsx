@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "../components/ProductCard";
+import { Link } from "react-router-dom";
 
 const mockProducts = [
   {
@@ -47,9 +48,14 @@ function Products() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-        <header className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Products</h1>
-          <p className="text-gray-600 mt-2">Discover curated items for your collection.</p>
+        <header className="mb-8 flex items-end justify-between gap-4 flex-wrap">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900">Products</h1>
+            <p className="text-gray-600 mt-2">Discover curated items for your collection.</p>
+          </div>
+          <Link to="/products/create" className="inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">
+            Create Product
+          </Link>
         </header>
 
         {(!products || products.length === 0) ? (
