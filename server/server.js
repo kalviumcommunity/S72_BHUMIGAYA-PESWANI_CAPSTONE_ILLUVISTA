@@ -5,6 +5,7 @@ const userRoutes = require('./routes/userRoutes');
 const cors = require('cors');
 const path = require('path');
 const uploadRoutes = require('./routes/uploadRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 // Load environment variables
 dotenv.config();
@@ -28,6 +29,7 @@ app.get('/', (req, res) => {
 });
 app.use('/api/users', userRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/auth', authRoutes);
 
 // Add the GET method
 app.get('/he', (req, res) => {
